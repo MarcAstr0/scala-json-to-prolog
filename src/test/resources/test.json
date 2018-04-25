@@ -1,0 +1,23 @@
+{
+  "city": [
+    {"name": "'Tokyo'", "population": 38001000},
+    {"name": "'Delhi'", "population": 25703168},
+    {"name": "'Shanghai'", "population": 23740778},
+    {"name": "'Sao Paulo'", "population": 21066245},
+    {"name": "'Mumbai'", "population": 21042538},
+    {"name": "'Mexico City'", "population": 20998543},
+    {"name": "'Beijing'", "population": 20383994},
+    {"name": "'Osaka'", "population": 20237645},
+    {"name": "'Cairo'", "population": 18771769},
+    {"name": "'New York'", "population": 18593220}
+  ],
+  "country": [
+    {"name": "'Japan'", "capital": "'Tokyo'", "population": 127239952},
+    {"name": "'India'", "capital": "'New Delhi'", "population": 1358381702},
+    {"name": "'China'", "capital": "'Beijing'", "population": 1396368918},
+    {"name": "'Brazil'", "capital": "'Brasilia'", "population": 213274171},
+    {"name": "'Mexico'", "capital": "'Mexico City'", "population": 132018658},
+    {"name": "'Egypt'", "capital": "'Cairo'", "population": 97265337},
+    {"name": "'United States'", "capital": "'Washington DC'", "population": 328686462}
+  ]
+}
