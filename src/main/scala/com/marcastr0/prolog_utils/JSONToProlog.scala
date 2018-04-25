@@ -1,4 +1,4 @@
-package com.marcastr0.json_to_prolog
+package com.marcastr0.prolog_utils
 
 import spray.json._
 import DefaultJsonProtocol._

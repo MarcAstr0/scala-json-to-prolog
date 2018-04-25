@@ -1,9 +1,9 @@
-package com.marcastr0.json_to_prolog
+package com.marcastr0.prolog_utils
 
 import org.scalatest.{FlatSpec, Matchers}
 import spray.json._
 import scala.io.Source
-import com.marcastr0.json_to_prolog.{JSONToProlog => Convert}
+import com.marcastr0.prolog_utils.{JSONToProlog => Convert}
 
 class JSONToPrologSpec extends FlatSpec with Matchers {
 
