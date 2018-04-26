@@ -1,4 +1,5 @@
-name := "scala-json-to-prolog"
+name := "json-to-prolog"
+organization := "com.marcastr0"
 
 version := "0.1"
 
@@ -13,3 +14,5 @@ libraryDependencies ++= {
     "net.liftweb"   %% "lift-webkit" % liftVersion % "compile"
   )
 }
+
+licenses += ("MIT", url("https://github.com/MarcAstr0/scala-json-to-prolog/blob/master/LICENSE"))
