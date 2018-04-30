@@ -1,0 +1,3 @@
+% turno(DataDate,EndTime,EntryTime,IdEmployee,IdTimetable,LocationId).
+turno(1524106800,1524160800,1524135600,1429,834,'J512').
+turno(1524106800,1524168000,1524142800,1578,835,'J512').

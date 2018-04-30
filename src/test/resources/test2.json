@@ -1,0 +1,20 @@
+{
+  "turno": [
+    {
+      "DATA_DATE": 1524106800,
+      "END_TIME": 1524160800,
+      "ENTRY_TIME": 1524135600,
+      "ID_EMPLOYEE": 1429,
+      "ID_TIMETABLE": 834,
+      "LOCATION_ID": "'J512'"
+    },
+    {
+      "DATA_DATE": 1524106800,
+      "END_TIME": 1524168000,
+      "ENTRY_TIME": 1524142800,
+      "ID_EMPLOYEE": 1578,
+      "ID_TIMETABLE": 835,
+      "LOCATION_ID": "'J512'"
+    }
+  ]
+}

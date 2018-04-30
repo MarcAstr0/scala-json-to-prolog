@@ -15,8 +15,8 @@ class JSONToPrologSpec extends FlatSpec with Matchers {
   it should "convert an object with one predicate" in {
     val json ="""{ "parent": [ { "parent": "mike", "child": "marcia" } ] }"""
     val prolog =
-      """% parent(Parent,Child).
-        |parent(mike,marcia).""".stripMargin
+      """% parent(Child,Parent).
+        |parent(marcia,mike).""".stripMargin
     Convert.toProlog(json.parseJson) shouldEqual prolog
   }
 
@@ -31,9 +31,9 @@ class JSONToPrologSpec extends FlatSpec with Matchers {
         |{ "code": "'YYZ'", "city": "'Toronto'" },
         |{ "code": "'SCL'", "city": "'Santiago'" } ] }""".stripMargin
     val prolog =
-      """% airport(Code,City).
-        |airport('YYZ','Toronto').
-        |airport('SCL','Santiago').""".stripMargin
+      """% airport(City,Code).
+        |airport('Toronto','YYZ').
+        |airport('Santiago','SCL').""".stripMargin
     Convert.toProlog(json.parseJson) shouldEqual prolog
   }
 
@@ -58,6 +58,12 @@ class JSONToPrologSpec extends FlatSpec with Matchers {
   it should "convert larger examples" in {
     val json = Source.fromResource("test.json").getLines.mkString
     val prolog = Source.fromResource("test.pl").getLines.mkString("\n")
+    Convert.toProlog(json.parseJson) shouldEqual prolog
+  }
+
+  it should "have the parameters ordered alphabetically" in {
+    val json = Source.fromResource("test2.json").getLines.mkString
+    val prolog = Source.fromResource("test2.pl").getLines.mkString("\n")
     Convert.toProlog(json.parseJson) shouldEqual prolog
   }
 }

@@ -12,12 +12,12 @@
     {"name": "'New York'", "population": 18593220}
   ],
   "country": [
-    {"name": "'Japan'", "capital": "'Tokyo'", "population": 127239952},
-    {"name": "'India'", "capital": "'New Delhi'", "population": 1358381702},
-    {"name": "'China'", "capital": "'Beijing'", "population": 1396368918},
-    {"name": "'Brazil'", "capital": "'Brasilia'", "population": 213274171},
-    {"name": "'Mexico'", "capital": "'Mexico City'", "population": 132018658},
-    {"name": "'Egypt'", "capital": "'Cairo'", "population": 97265337},
-    {"name": "'United States'", "capital": "'Washington DC'", "population": 328686462}
+    {"capital": "'Tokyo'", "name": "'Japan'", "population": 127239952},
+    {"capital": "'New Delhi'", "name": "'India'", "population": 1358381702},
+    {"capital": "'Beijing'", "name": "'China'", "population": 1396368918},
+    {"capital": "'Brasilia'", "name": "'Brazil'", "population": 213274171},
+    {"capital": "'Mexico City'", "name": "'Mexico'", "population": 132018658},
+    {"capital": "'Cairo'", "name": "'Egypt'", "population": 97265337},
+    {"capital": "'Washington DC'", "name": "'United States'", "population": 328686462}
   ]
 }

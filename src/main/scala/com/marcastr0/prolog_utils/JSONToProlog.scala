@@ -4,6 +4,8 @@ import spray.json._
 import DefaultJsonProtocol._
 import net.liftweb.util.StringHelpers.{camelify, camelifyMethod}
 
+import scala.collection.immutable.ListMap
+
 object JSONToProlog {
 
   def toProlog(json: JsValue): String = {
@@ -12,9 +14,13 @@ object JSONToProlog {
     val result = for {
       predicate <- predicates
       predicateName = camelifyMethod(predicate.replaceAll("-", "_"))
-      parameters = data.getOrElse(predicate, Seq()).headOption.getOrElse(Map()).keysIterator.map(camelify).mkString(",")
+      parameters = data.getOrElse(predicate, Seq()).headOption.getOrElse(Map())
+        .keysIterator.toSeq.sortWith(_ < _).map(s => camelify(s.toLowerCase)).mkString(",")
       comment = if (!parameters.isEmpty) s"% $predicateName($parameters)." else ""
-      facts = data.getOrElse(predicate, Seq()).map(x => s"$predicateName(${x.values.map(JsValue2String).mkString(",")}).")
+      facts = data.getOrElse(predicate, Seq()).map(x => {
+        val sorted = ListMap(x.toSeq.sortBy(_._1):_*)
+        s"$predicateName(${sorted.values.map(JsValue2String).mkString(",")})."
+      })
     } yield (List(comment) ++ facts).mkString("\n")
     result.mkString("\n")
   }

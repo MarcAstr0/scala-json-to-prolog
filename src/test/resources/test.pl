@@ -9,11 +9,11 @@ city('Beijing',20383994).
 city('Osaka',20237645).
 city('Cairo',18771769).
 city('New York',18593220).
-% country(Name,Capital,Population).
-country('Japan','Tokyo',127239952).
-country('India','New Delhi',1358381702).
-country('China','Beijing',1396368918).
-country('Brazil','Brasilia',213274171).
-country('Mexico','Mexico City',132018658).
-country('Egypt','Cairo',97265337).
-country('United States','Washington DC',328686462).
+% country(Capital,Name,Population).
+country('Tokyo','Japan',127239952).
+country('New Delhi','India',1358381702).
+country('Beijing','China',1396368918).
+country('Brasilia','Brazil',213274171).
+country('Mexico City','Mexico',132018658).
+country('Cairo','Egypt',97265337).
+country('Washington DC','United States',328686462).
